@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Clickable Map</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .map-header h1 {
+      letter-spacing: 1px;
+      text-align: center;
+      font-size: 40px;
+      color: red;
+      padding: 20px;
+      margin: 0;
+    }
+
+    .map-footer h1 {
+      letter-spacing: 1px;
+      text-align: center;
+      font-size: 40px;
+      padding: 20px;
+      margin: 0;
+    }
+
+    .map-container {
+      position: relative;
+      width: 100%;
+      max-width: 100%;
+      margin: auto;
+      aspect-ratio: 768 / 1048;
+      background: url('https://fama.b-cdn.net/Plot/ap.jpg') no-repeat center center;
+      background-size: cover;
+      border: 1px solid #ccc;
+    }
+
+    .map-icon {
+      position: absolute;
+      width: 28px;
+      height: 20px;
+      padding-top: 3%;
+      background-image: url(https://maps.gstatic.com/mapfiles/api-3/images/spotlight-poi2.png);
+      background-repeat: no-repeat;
+      cursor: pointer;
+      transform: translate(-50%, -50%);
+    }
+
+    /* Position using percentages for responsiveness */
+    #wet-basin {
+      top: 3.5%;
+      left: 51.9%;
+    }
+
+    #south-jetty {
+      top: 26.9%;
+      left: 48.2%;
+    }
+
+    #ecr4-building {
+      top: 29.5%;
+      left: 43.4%;
+    }
+
+    #berth-1 {
+      top: 30.7%;
+      left: 46.5%;
+    }
+
+    #berth-2 {
+      top: 39.7%;
+      left: 46.2%;
+    }
+
+    #berth-3 {
+      top: 46.3%;
+      left: 46.3%;
+    }
+
+    #new-port-building {
+      top: 48.4%;
+      left: 43.4%;
+    }
+
+    #berth-4 {
+      top: 51.3%;
+      left: 46%;
+    }
+
+    #berth-5 {
+      top: 67.6%;
+      left: 45.8%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main-container">
+    <div class="map-header">
+      <h1>AM/NS Ports</h1>
+    </div>
+    <div class="map-container">
+      <div id="wet-basin" class="map-icon" onclick="openMap(21.106861, 72.658474)" title="Wet Basin"></div>
+      <div id="south-jetty" class="map-icon" onclick="openMap(21.098222, 72.657417)" title="South Jetty"></div>
+      <div id="ecr4-building" class="map-icon" onclick="openMap(21.097182, 72.656020)" title="ECR4 Building"></div>
+      <div id="berth-1" class="map-icon" onclick="openMap(21.096828, 72.656964)" title="Berth No.1"></div>
+      <div id="berth-2" class="map-icon" onclick="openMap(21.093484, 72.656921)" title="Berth No.2"></div>
+      <div id="berth-3" class="map-icon" onclick="openMap(21.090921, 72.656925)" title="Berth No.3"></div>
+      <div id="new-port-building" class="map-icon" onclick="openMap(21.090238, 72.656098)" title="New Port Building"></div>
+      <div id="berth-4" class="map-icon" onclick="openMap(21.089229, 72.656858)" title="Berth No.4"></div>
+      <div id="berth-5" class="map-icon" onclick="openMap(21.083308, 72.656840)" title="Berth No.5"></div>
+
+    </div>
+    <div class="map-footer">
+      <h1>Assembly Point</h1>
+    </div>
+  </div>
+  <script>
+    function openMap(lat, lng) {
+      const url = `https://www.google.com/maps?q=${lat},${lng}`;
+      window.open(url, '_blank');
+    }
+  </script>
+
+</body>
+</html>
